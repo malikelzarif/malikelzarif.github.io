@@ -40,20 +40,49 @@ header p {
   opacity: 0.95;
 }
 
-/* ===== NAV ===== */
-nav {
-  margin-top: 20px;
+/* ===== NAV (FIXED — MATCHES PROJECTS PAGE ON ALL PAGES) ===== */
+/* Supports BOTH: <header><nav>...</nav></header> AND <header><div class="site-nav">...</div></header> */
+header nav,
+header .site-nav {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-nav a {
-  color: #cbd5f5;
-  margin: 0 14px;
-  text-decoration: none;
+header nav a,
+header .site-nav a {
+  color: #cbd5f5;          /* soft light like Projects page */
   font-weight: 500;
+  text-decoration: none;  /* remove underline */
 }
 
-nav a:hover {
+/* IMPORTANT: prevent purple visited links */
+header nav a:visited,
+header .site-nav a:visited {
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+header nav a:hover,
+header .site-nav a:hover {
   color: var(--accent);
+  text-decoration: none;
+}
+
+/* Optional: if you manually add class="active" in HTML */
+header nav a.active,
+header .site-nav a.active {
+  color: #ffffff;
+}
+
+/* Keyboard focus (clean + professional) */
+header nav a:focus-visible,
+header .site-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 /* ===== SECTIONS ===== */
