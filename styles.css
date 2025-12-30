@@ -309,3 +309,136 @@ header nav a[aria-current="page"]:hover {
     0 0 14px rgba(34, 211, 238, 0.65),
     0 0 28px rgba(34, 211, 238, 0.45);
 }
+/* =========================
+   MOBILE / RESPONSIVE FIXES
+   Paste at END of styles.css
+   ========================= */
+
+/* Prevent horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make long lines and links wrap nicely */
+p, li, a, h1, h2, h3 {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 768px) {
+
+  /* Header spacing + readable type */
+  header {
+    padding: 56px 16px;
+  }
+
+  header h1 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 2px;
+  }
+
+  /* NAV: becomes a clean, pill-like wrap that matches your theme */
+  header .site-nav {
+    margin-top: 16px;
+    gap: 10px;
+    padding: 0 6px;
+  }
+
+  header .site-nav a {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.10);
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* Active nav: glow + standout */
+  header .site-nav a.active {
+    color: var(--accent);
+    border-color: rgba(34,211,238,0.55);
+    box-shadow: 0 0 0 3px rgba(34,211,238,0.18);
+  }
+
+  /* Sections: tighter spacing, better flow */
+  section {
+    margin: 36px auto;
+    padding: 0 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+
+  /* Cards: comfortable on phone */
+  .card, .project-card {
+    padding: 18px;
+    margin-top: 14px;
+    border-radius: 10px;
+  }
+
+  /* Grid cards stack nicer */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Buttons: full width and easy tap */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  /* Lists: compact */
+  ul {
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  /* Iframes (booking/calendar): responsive */
+  iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 720px;
+    border-radius: 12px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 26px 14px;
+    margin-top: 48px;
+    font-size: 13px;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 420px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  header .site-nav a {
+    font-size: 13px;
+    padding: 10px 10px;
+  }
+
+  iframe {
+    height: 760px;
+  }
+}
