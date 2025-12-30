@@ -621,3 +621,106 @@ p, li, a, h1, h2, h3 {
     font-size: 30px;
   }
 }
+/* =========================
+   MOBILE FIX (PHONE LAYOUT)
+   Paste at END of styles.css
+   ========================= */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/* Make every page consistent on phones */
+@media (max-width: 720px) {
+
+  header {
+    padding: 60px 16px;
+  }
+
+  header h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* NAV: pill style + wraps nicely on small screens */
+  header nav,
+  header .site-nav,
+  nav.site-nav {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  header nav a,
+  header .site-nav a,
+  nav.site-nav a {
+    margin: 0 !important;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    color: #cbd5f5;
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  header nav a:hover,
+  header .site-nav a:hover,
+  nav.site-nav a:hover {
+    color: var(--accent);
+  }
+
+  header nav a.active,
+  header .site-nav a.active,
+  nav.site-nav a.active {
+    color: var(--accent);
+    background: rgba(34,211,238,0.12);
+    border-color: rgba(34,211,238,0.35);
+    box-shadow: 0 0 18px rgba(34,211,238,0.25);
+  }
+
+  section {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  /* FORCE ALL CARD/GRID LAYOUTS TO 1 COLUMN ON MOBILE */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .card,
+  .project-card {
+    padding: 18px;
+    margin-top: 14px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  footer {
+    padding: 26px 16px;
+  }
+}
