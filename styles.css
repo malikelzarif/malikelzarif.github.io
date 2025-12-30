@@ -560,3 +560,64 @@ p, li, a, h1, h2, h3 {
 
 </body>
 </html>
+/* ==============================
+   MOBILE FIX (PHONE FRIENDLY)
+   Paste at the VERY BOTTOM of styles.css
+   ============================== */
+@media (max-width: 768px) {
+
+  /* Header spacing + readable text */
+  header {
+    padding: 70px 16px;
+  }
+
+  header h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  header p {
+    font-size: 15px;
+    padding: 0 6px;
+  }
+
+  /* Sections */
+  section {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  /* Cards: tighter + cleaner on phone */
+  .card,
+  .project-card {
+    padding: 18px;
+    margin-top: 16px;
+  }
+
+  /*  MAIN FIX: force ALL grids to 1 column on phones */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* If Services page uses a different wrapper name, this catches it too */
+  .services-grid,
+  .services-list,
+  .cards-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* Make embeds (booking iframe) fit phone width */
+  iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  header h1 {
+    font-size: 30px;
+  }
+}
