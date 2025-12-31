@@ -387,3 +387,88 @@ footer{
   .companies-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .companies-grid img { height: 34px; }
 }
+/* ===== Services page FIX (paste at very bottom) ===== */
+
+/* 1) Stop the GLOBAL section rule from breaking Services layout */
+.services-hero,
+.services-section,
+.services-section section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  animation: none;
+}
+
+/* Keep your content centered using your theme container */
+.services-hero .container,
+.services-section .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Add back the spacing you actually want */
+.services-hero {
+  padding: 78px 0 46px;
+  border-bottom: 1px solid var(--border);
+}
+
+.services-section {
+  padding: 54px 0 76px;
+}
+
+/* 2) Add GHOST button style (because you use class="btn ghost") */
+.btn.ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(10, 37, 64, 0.22);
+}
+
+.btn.ghost:hover {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.60);
+  color: var(--primary);
+}
+/* ===== Services page FIX (paste at very bottom) ===== */
+
+/* 1) Stop the GLOBAL section rule from breaking Services layout */
+.services-hero,
+.services-section,
+.services-section section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  animation: none;
+}
+
+/* Keep your content centered using your theme container */
+.services-hero .container,
+.services-section .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Add back the spacing you actually want */
+.services-hero {
+  padding: 78px 0 46px;
+  border-bottom: 1px solid var(--border);
+}
+
+.services-section {
+  padding: 54px 0 76px;
+}
+
+/* 2) Add GHOST button style (because you use class="btn ghost") */
+.btn.ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(10, 37, 64, 0.22);
+}
+
+.btn.ghost:hover {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.60);
+  color: var(--primary);
+}
+
