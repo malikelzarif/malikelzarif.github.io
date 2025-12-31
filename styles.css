@@ -38,7 +38,15 @@ body{
 
 section{
   animation:fadeUp .7s ease both;
+  max-width:var(--container);
+  margin:64px auto;
+  padding:0 20px;
 }
+
+.fade-up { animation:fadeUp .7s ease both; }
+.delay-1{ animation-delay:.12s; }
+.delay-2{ animation-delay:.24s; }
+.delay-3{ animation-delay:.36s; }
 
 /* ===== Layout Helpers ===== */
 .page{
@@ -65,6 +73,8 @@ header{
     linear-gradient(180deg, #0A2540 0%, #061A2E 100%);
 }
 
+.header-content{ display:flex; flex-direction:column; align-items:center; gap:12px; }
+
 header h1{
   margin:0 0 10px;
   font-weight:600;
@@ -77,6 +87,22 @@ header p{
   max-width:900px;
   opacity:.92;
   font-size:18px;
+}
+
+.eyebrow{
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:12px;
+  opacity:.85;
+  margin:0;
+}
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:6px;
 }
 
 /* ===== Header Nav (consistent everywhere) ===== */
@@ -140,6 +166,17 @@ header .site-nav a[aria-current="page"]{
   box-shadow:var(--shadowHover);
 }
 
+/* Booking card with higher contrast */
+.booking-card{
+  background:linear-gradient(135deg, #f9fbff, #edf6ff);
+  border:1px solid rgba(10,37,64,.14);
+  box-shadow:0 16px 34px rgba(2,6,23,.14);
+}
+
+.booking-card .lead{
+  color:var(--text);
+}
+
 /* ===== Grid ===== */
 .grid{
   display:grid;
@@ -153,7 +190,7 @@ li{ margin-bottom:8px; }
 /* ===== Buttons ===== */
 .btn{
   display:inline-block;
-  margin-top:22px;
+  margin-top:10px;
   padding:14px 28px;
   border-radius:var(--radius);
   background:var(--primary);
@@ -184,7 +221,7 @@ li{ margin-bottom:8px; }
 }
 
 /* Two buttons in hero */
-header .btn + .btn { margin-left: 12px; }
+header .btn + .btn { margin-left: 0; }
 
 /* ===== Project Link Card Fix ===== */
 .project-link{
@@ -211,9 +248,17 @@ header .btn + .btn { margin-left: 12px; }
   height:650px;
   border:0;
   border-radius:var(--radius);
-  background:#0b1220;
+  background:#fff;
   box-shadow:var(--shadow);
 }
+
+.booking-card .embed{
+  background:#fff;
+  border:1px solid rgba(10,37,64,.18);
+  box-shadow:0 10px 24px rgba(2,6,23,.06);
+}
+
+.project-meta{ margin:0; color:var(--secondary); }
 
 /* ===== Footer ===== */
 footer{
@@ -251,6 +296,11 @@ footer{
   .page--lift{
     margin-top:-18px;
     padding-bottom:48px;
+  }
+
+  section{
+    margin:46px auto;
+    padding:0 16px;
   }
 
   .card{

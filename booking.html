@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Appointment | Malik Elzarif</title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <div class="page header-content">
+      <p class="eyebrow">Executive Technology Partner</p>
+      <h1>Book an Appointment</h1>
+      <div class="hero-actions">
+        <a href="#schedule" class="btn">View Calendar</a>
+        <a href="Malik_Elzarif_Resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="booking.html" aria-current="page">Booking</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Book an Appointment</h1>
-<nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="projects.html">Projects</a>
-  <a href="booking.html" aria-current="page">Booking</a>
-</nav>
+  <main class="page page--lift">
+    <section id="schedule" class="fade-up">
+      <h2 class="section-title">Schedule</h2>
+      <div class="card booking-card">
+        <p class="lead">Pick a time that works best and I'll confirm quickly.</p>
+        <iframe
+          class="embed"
+          src="https://calendar.app.google/ypSGzHMoBdFUx6zt9"
+          title="Booking Calendar"></iframe>
+      </div>
+    </section>
+  </main>
 
-</header>
-<section>
-  <iframe
-    src="https://calendar.app.google/ypSGzHMoBdFUx6zt9"
-    style="width:100%; height:650px; border:0; border-radius:8px;">
-  </iframe>
-</section>
-
-<footer>© 2026 Malik Elzarif</footer>
+  <footer>© 2026 Malik Elzarif · Executive Technology Partner</footer>
 </body>
 </html>
